@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+<script>
+
+$(document).ready(function() {
+$("#sumbitIt").click(function () {
+
+    
+    
+    var txtRollNo=document.form1.txtRollNum.value;
+    var txtName=document.form1.txtName.value;
+    var txtAddress=document.form1.txtAddress.value;  
+    
+    alert(txtName);
+    
+   $.ajax({
+        url: 'http://localhost:8080/sendRequestParamsToREST',
+        
+        type: 'POST',
+        data: { rollNo: txtRollNo, name: txtName, address:txtAddress},
+        success: function (response) {
+            alert("success:-> " +  JSON.stringify(response));
+        },
+        error: function () {
+            alert("error");
+        }
+    });
+    
+     
+    
+});
+});
+
+</script>
+</head>
+<body>
+
+
+<br> <br>
+
+
+
+<form name="form1">
+
+<div class="container">
+  <h3>Registration</h3>
+  <div class="card">
+    <div class="card-body">
+
+
+
+<div class="row">
+    <div class="col-md-8 pad-adjust">
+      <div class="form-group">
+<label for="">Roll No</label>
+<input type="text" class="form-control" id="txtRollNum" placeholder="Roll Number" >
+                     </div>
+    </div>
+ 
+
+
+
+ 
+  </div> <!-- end of row-->
+
+
+
+<div class="row">
+    <div class="col-md-8 pad-adjust">
+      <div class="form-group">
+<label for=""> Name</label>
+<input type="text" class="form-control" id="txtName" placeholder="Name">
+ </div>
+    </div>
+
+
+ 
+ </div> <!-- end of row-->
+
+
+ 
+
+
+<div class="row">
+    <div class="col-md-8 pad-adjust">
+      <div class="form-group">
+<label for="">Address</label>
+<input type="text" class="form-control" id="txtAddress" placeholder="Address">
+ </div>
+    </div>
+
+
+ 
+ </div> <!-- end of row-->
+
+
+
+ 
+<button type="button" class="btn btn-primary" id="sumbitIt">Submit</button>
+
+
+
+</div>    <!-- end of card body-->
+
+ 
+</div>  <!-- end of card-->
+
+
+</div>  <!-- end of container-->
+
+</form>
+</body>
+</html>

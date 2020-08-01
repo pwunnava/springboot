@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Prasad Cart demo..</title>
+
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<script>
+$(document).ready(function() {
+$("#sumbitIt").click(function () {
+
+    
+    
+   var prasadRequest= new Object();
+   prasadRequest.message = 'WSP is calling from HTML Page'; 
+    
+    alert("hello wunnava");
+    var urlStr="https://dkgc02hjj7.execute-api.us-east-2.amazonaws.com/default/PrasadLambdaREST1";
+   $.ajax({
+        url: urlStr,
+        headers: {'X-API-KEY':'OD02gaxX7WaxaGUMIiN767E9OVkVejOh8jzuzkBu'},
+        data: JSON.stringify(prasadRequest),
+        type: 'POST',
+        success: function (response) {
+            alert("success is:-> " + response + " <->" +  JSON.stringify(response));
+        },
+        error: function () {
+            alert("error");
+        }
+    });
+    
+     
+    
+});
+});
+
+</script>
+
+
+
+<div class="container">
+  <h3>Tabs</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#"> User Registration</a></li>
+    <li><a href="#"> Create Cart</a></li>
+    <li><a href="#">Place Order</a></li>
+    <li><a href="#">Search Orders </a></li>
+ 
+  </ul>
+  <br>
+  <p><strong>Note:</strong> This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done.</p>
+</div>
+
+
+<button type="button" class="btn btn-primary" id="sumbitIt">Submit</button>
+
+
+
+</body>
+</html>
+

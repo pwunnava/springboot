@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+
+<br> <br>
+
+
+
+
+
+<div class="container">
+
+<!-- Nav tabs -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#"><font color="yellow">Tech Books online.</font></a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="http://www.e-profits.net/register.html">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://www.e-profits.net/addcart.html">Shop</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://www.e-profits.net/searchorders.html">Search orders</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <br><br>
+  <span id="cartItemCount"> </span>
+  
+  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://furnituregains.net/checkout.jpg" onclick="prepareJSON()" >
+<br><span id="checkoutmsg"> </span>
+<br> <br>
+  <div class="table-responsive-sm">
+            
+  <table class="table">
+    <tbody>
+      <tr>  <td><span> <img src="http://furnituregains.net/book1.png"> &nbsp; Learn c# in 1 day - 10$ <br><br>
+      Quantity: <select name="sel1234" onchange="selectQt('1234')">
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+      
+      </span></td> <td><br><br><br><span id="id1234"> </span> &nbsp;&nbsp;<br><br><img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('1234|Learn c# in 1 day|10|1', 'id1234')"></td></tr>
+      <tr>  <td><img src="http://furnituregains.net/book2.png">  Learn java in 1 day - 12$ 
+      <br><br>
+      Quantity: <select name="sel1284" onchange="selectQt('1284')">
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+      
+      </td> <td> <br><br><br><span id="id1284"> </span> &nbsp;&nbsp;<br><br><img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('1284|Learn java in 1 day|12|1','id1284')"></td></tr>
+      <tr> <td><img src="http://furnituregains.net/book3.jpg"> Python for everybody - 14$ 
+      <br><br>
+      Quantity: <select name="sel1134" onchange="selectQt('1134')">
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+      
+      </td> <td><br><br><br><span id="id1134"> </span> &nbsp;&nbsp;<br><br> <img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('1134|Python for everybody|14|1','id1134')"></td></tr>
+      <tr> <td><img src="http://furnituregains.net/book4.jpg"> Math Workbook - 16$ 
+            <br><br>
+       Quantity: <select name="sel1876"  onchange="selectQt('1876')">
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+      
+      
+      </td> <td> <br><br><br><span id="id1876"> </span> &nbsp;&nbsp;<br><br><img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('1876|Math Workbook|16|1','id1876')"></td></tr>
+     
+      
+       <tr> <td><img src="http://furnituregains.net/book5.png"> Python for Data Analysis - 13$ 
+       
+ <br><br>
+        Quantity: <select name="sel1098" onchange="selectQt('1098')">
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+       
+       
+       </td> <td><br><br><br><span id="id1098"> </span> &nbsp;&nbsp;<br><br><img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('1098|Python for Data Analysis|13|1', 'id1098')"></td></tr>
+       <tr> <td><img src="http://furnituregains.net/book6.jpg"> Python Crash Course - 12$ 
+       
+       <br><br>
+        Quantity: <select name="sel1985" onchange="selectQt('1985')">
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+</select>
+       
+       </td> <td><br><br><br> <span id="id1985"> </span> &nbsp;&nbsp;<br><br><img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('1985|Python Crash Course|12|1', 'id1985')"></td></tr>
+      <tr> <td><img src="http://furnituregains.net/book7.jpg"> Statistical Learning - 14$</td> <td><br><br><br> <span id="id1541"> </span> &nbsp;&nbsp;<br><br><img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('1541|Statistical Learning|14', 'id1541')"></td></tr>
+      <tr> <td><img src="http://furnituregains.net/book8.jpg"> SQL 10 Minutes - 10$ </td> <td><br><br><br> <span id="id1911"> </span> &nbsp;&nbsp;<br><br><img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('1911|SQL 10 Minutes|10', 'id1911')"></td></tr>
+      
+        <tr>
+        <td><img src="http://furnituregains.net/book9.png">Go Programming Language - 15$
+        
+        
+        
+        
+        </td> <td><br><br><br> <span id="id7654"> </span> &nbsp;&nbsp;<br><br><img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('7654|Go Programming Language|15|1', 'id7654')"></td></tr>
+        <td><img src="http://furnituregains.net/book10.jpg">Ruby Programming Language - 10$</td> <td><br><br><br> <span id="id8971"> </span> &nbsp;&nbsp;<br><br><img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('8971|Ruby Programming Language|10','id8971')"></td></tr>
+       <td><img src="http://furnituregains.net/book11.jpg">Regular Expressions - 8$ </td> <td><br><br><br><span id="id8987"> </span> &nbsp;&nbsp;<br><br> <img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('8987|Regular Expressions|8', 'id8987')"></td></tr>
+       <td><img src="http://furnituregains.net/book12.jpg">Ruby - 9$</td> <td><br><br><br><span id="id9876"> </span> &nbsp;&nbsp;<br><br> <img src="http://furnituregains.net/addtocart.png" width= "110" height="28" onclick="javascript:addToCart('9876|Ruby|9', 'id9876')"></td></tr>
+      </tr>  
+       
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://furnituregains.net/checkout.jpg" onclick="prepareJSON()">
+
+ <script>
+
+var items = [];
+var cartArray = [];
+var item="";
+var cart= new Object();
+
+
+function selectQuantityDuringLoad(id, quant)
+{
+
+var optionsIndex=quant-1;
+document.all[id].options[optionsIndex].selected=true;
+
+countItemsInCart();
+}
+
+
+
+
+function selectQt(id)
+{
+//alert(id);
+var newQuant=document.all['sel' + id].value;
+var arrStrCart="";
+var updatedStr="";
+for (index = 0; index < cartArray.length; index++) { 
+     strCart= cartArray[index];
+     arrStrCart=strCart.split("|");
+     
+     //check if this item was already in the cart...
+     if(id==arrStrCart[0])
+     {
+     updatedStr=arrStrCart[0] + "|" + arrStrCart[1] + "|"  + arrStrCart[2] + "|" + newQuant;
+     cartArray[index]=updatedStr;
+     }
+    
+    }
+
+countItemsInCart();
+}
+
+function countItemsInCart()
+{
+var strArray="";
+var cartItems=0;
+var varStrM="";
+var varQuant=0;
+for (index = 0; index < cartArray.length; index++) { 
+    var str= cartArray[index];
+    
+    if(str=="removed")
+    {
+     continue;
+    }
+    else
+    {
+    strArray=str.split("|");
+    varQuant=strArray[3];
+    cartItems = cartItems + parseInt(varQuant);
+    }
+   }
+    
+    varStrM="<h5>You have " + cartItems + " item(s) in the cart..</h5>";
+    
+    document.all['cartItemCount'].innerHTML=varStrM;
+    
+
+}
+
+function reloadExistingCart(mycart)
+{
+ var strCartMsg="";
+ var prasadcart=JSON.parse(mycart);
+var strRow1="";
+var strRow2="";
+var selID="";
+var quant="";
+ for(var i=0;i<prasadcart.length;i++)
+{
+document.all['checkoutmsg'].innerHTML="";
+//strCartMsg=prasadcart.length + " Item(s) in the cart";
+ //document.all['checkoutmsg'].innerHTML= strCartMsg;
+strRow1= prasadcart[i].itemNo + "|" + prasadcart[i].itemDesc + "|" + prasadcart[i].price + "|" + prasadcart[i].quantity;
+strRow2="id"+ prasadcart[i].itemNo;
+selID="sel" + prasadcart[i].itemNo;
+quant=prasadcart[i].quantity;
+
+selectQuantityDuringLoad(selID,quant);
+
+addToCart(strRow1,strRow2);
+//alert("The quant is:-" + quant);
+
+strRow2="";
+strRow1="";
+
+} 
+
+countItemsInCart();
+}
+
+
+function getCookie(cname) {
+var mycookieval="empty";
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      mycookieval= c.substring(name.length, c.length);
+    }
+  }
+  
+ 
+ return mycookieval;
+}
+
+ var cookieName='cookieCart';
+ var mycart= getCookie(cookieName);
+ 
+ reloadExistingCart(mycart);
+
+
+if(performance.navigation.type == 2){
+   location.reload(true);
+}
+
+$(document).ready(function() {
+$("#sumbitIt").click(function () {
+
+
+    
+});
+});
+
+
+function checkIfAlreadyAdded(str)
+{
+//get the item code...
+var arrStrItemCodes=str.split("|");
+var icode=arrStrItemCodes[0];  //this is item code..
+
+//get the quantity selected for that item code
+var selQuant=document.all['sel' + icode].value;
+
+var strCart="";
+var exists="no";
+var arrCartItem="";
+var strUpdatedItemRow="";
+for (index = 0; index < cartArray.length; index++) { 
+     strCart= cartArray[index];
+     arrCartItem=strCart.split("|");
+      if(icode==arrCartItem[0])  //update the quantity if needed...
+      {
+       strUpdatedItemRow=arrCartItem[0] + "|" + arrCartItem[1] +  "|" +  arrCartItem[1] + "|" + selQuant;
+       return "yes";
+       }
+    }
+
+ return "no";
+}
+
+function selectQuantyto1(id)
+{
+document.all[id].options[0].selected=true;
+
+}
+
+function removeCart(idRem)
+{
+
+var res = idRem.substring(2, idRem.length);
+var selSetToQuant1='sel' + res;
+
+//alert(selSetToQuant1);
+var aa="";
+var tobeRemoved="";
+document.all[idRem].innerHTML=aa;
+
+for (index = 0; index < cartArray.length; index++) { 
+    var str= cartArray[index];
+    
+    if(str=="removed")
+    continue;
+    
+    var arr=str.split("|");
+    var arrId=arr[0];  //just number id..
+    tobeRemoved="id" + arrId;
+    
+    if(tobeRemoved==idRem)
+    {
+    cartArray[index]="removed";
+    }
+    
+    }
+    
+   selectQuantyto1(selSetToQuant1);
+  countItemsInCart();  
+}
+
+function addToCart(str,id)
+{
+//alert(str);
+var arrStrItemRow=str.split("|");
+var icode=arrStrItemRow[0];  //this is item code..
+
+//get the quantity selected for that item code
+var selQuant=document.all['sel' + icode].value;
+
+var strWithUpdatedQuantity=arrStrItemRow[0] + "|"  + arrStrItemRow[1] + "|" + arrStrItemRow[2] + "|" + selQuant;
+//alert("strWithUpdatedQuantity:-" + strWithUpdatedQuantity);
+if(checkIfAlreadyAdded(str)=="no")
+{
+document.all['checkoutmsg'].innerHTML="";
+
+// push str with updated quantity......
+cartArray.push(strWithUpdatedQuantity); //str);
+}
+
+
+var aa="<img src='http://www.furnituregains.net/addedtocart.png' width='40' height='30'> <br><br> <a href=javascript:removeCart('"+ id + "')>Remove</a>";
+document.all[id].innerHTML=aa;
+
+countItemsInCart();
+}
+
+var orderamount=0;
+function prepareJSON()
+{
+var counter=0;
+var areAllRemoved="yes";
+for (index = 0; index < cartArray.length; index++) { 
+    var str= cartArray[index];
+    
+    if(str=="removed")
+    continue;
+    
+    var arr=str.split("|");
+    
+       areAllRemoved="no";
+       item= new Object();
+       item.itemNo=arr[0];
+       item.itemDesc=arr[1];
+       item.price=arr[2];
+       item.quantity=arr[3]
+       
+    
+    
+    items[counter]=item;
+    counter=counter + 1;
+    
+} 
+var strAlertMsg="<font color='red'> Your cart is empty. Please add one or more items.</font>";
+ if(cartArray.length==0 || areAllRemoved=="yes")
+ {
+ document.all['checkoutmsg'].innerHTML=strAlertMsg;
+ }
+ else
+ {
+ document.cookie = "cookieCart=" + JSON.stringify(items);
+ //alert(JSON.stringify(items));
+ window.location.href= "http://localhost:8080/placeorder";  //"http://www.e-profits.net/placeorder.html";
+ }
+ 
+}
+
+
+ 
+</script>
+ 
+</body>
+</html>

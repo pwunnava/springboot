@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp" >
+
+<div ng-controller="myCtrl">
+
+
+<form name="form1">
+
+   <input type="text" name="amount" value="1000">
+<br>
+
+  <p>Click the button to run a function:</p>
+  <button ng-click="myFunc()">OK</button>
+</form>
+
+
+</div>
+
+<script>
+
+  
+angular.module('myApp', [])
+  .controller('myCtrl', ['$scope','$http', function($scope,$http) {
+   
+    $scope.count = 0;
+
+   //THIS FUNCTION IS CALLED DURING THE PAGE LOAD... because you set ng-init="myFunc()"
+    $scope.myFunc = function() {
+      $scope.count++;
+
+      alert(document.form1.amount.value);
+
+  var ordernumber='order205591';
+  
+   var user = new Object();
+   user.ordernumber=ordernumber;
+  
+alert("hhhhhh---oooo--bull>");
+//var urlStr="https://m4ufp9h945.execute-api.us-east-2.amazonaws.com/dev/ordersrch";
+var urlStr="https://cna6lnjcca.execute-api.us-east-2.amazonaws.com/dev/registerUser";
+$http({
+        method : "POST",
+        url : urlStr,
+        headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+        data:JSON.stringify(user)
+    }).then(function mySuccess(response) {
+        alert(response.data);
+    }, function myError(response) {
+        alert(response.statusText);
+    });
+
+
+    } // end of this function..
+
+
+
+   /*The below function is called when the OK button is clicked..*/
+
+  $scope.wunnava= function() {
+   alert("Hello Prasad Wunnava..");
+
+  }
+
+    
+  }]);
+</script>
+</body>
+</html>

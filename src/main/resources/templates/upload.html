@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+
+     <link rel="stylesheet" th:href="@{/css/css.css}"/>
+     <script type="text/javascript" th:src="@{/js/prasad.js}"></script>
+  
+     
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+ 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<style>
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+a {
+    color: #128ff2;
+}
+
+button {
+    box-shadow: none;
+    border: 1px solid transparent;
+    font-size: 14px;
+    outline: none;
+    line-height: 100%;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 0.6rem 1rem;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    min-height: 38px;
+}
+
+button.primary {
+    background-color: #128ff2;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+}
+
+input {
+    font-size: 1rem;
+}
+
+input[type="file"] {
+    border: 1px solid #128ff2;
+    padding: 6px;
+    max-width: 100%;
+}
+
+.file-input {
+    width: 100%;
+}
+
+.submit-btn {
+    display: block;
+    margin-top: 15px;
+    min-width: 100px;
+}
+
+@media screen and (min-width: 500px) {
+    .file-input {
+        width: calc(100% - 115px);
+    }
+
+    .submit-btn {
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 10px;
+    }
+}
+
+.upload-container {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fff;
+      box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+      margin-top: 60px;
+      min-height: 400px;
+      position: relative;
+      padding: 20px;
+}
+
+.upload-header {
+    border-bottom: 1px solid #ececec;
+}
+
+.upload-header h2 {
+    font-weight: 500;
+}
+
+.single-upload {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.upload-response {
+    overflow-x: hidden;
+    word-break: break-all;
+}
+</style>
+</head>
+
+<body>
+
+
+<br><br>
+
+<script>
+
+    function uploadMultipleFiles(files) {
+    var formData = new FormData();
+    for(var index = 0; index < files.length; index++) {
+        formData.append("files", files[index]);
+    }
+
+}
+
+
+$(document).ready(function() {
+$("#button1").click(function () {
+
+var fd = new FormData(); 
+var files = $('#myfile')[0].files[0]; 
+alert(files);
+fd.append('file', files); 
+                
+    
+    alert("The form data is:->" + fd);
+    alert("I am clicked");
+    
+    $.ajax({
+        type: "POST",
+        enctype: 'multipart/form-data',
+        url: "http://localhost:9000/uploadFileFromWebPageToS3",
+        data: fd,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            console.log(response);
+            alert(response);
+            // process response
+        },
+        error: function (error) {
+            console.log(error);
+            // process error
+        }
+    });
+    
+    
+    
+});  
+
+
+ $("#button2").click(function () {
+
+var varFiles = document.multipleUploadForm.myfiles;
+alert("hi");
+var fd = new FormData();
+ for(var index = 0; index < varFiles.files.length; index++) {
+ alert(varFiles.files[index]);
+   fd.append("files", varFiles.files[index]);  
+   
+ }
+ 
+  $.ajax({
+        type: "POST",
+        enctype: 'multipart/form-data',
+        url: "http://localhost:8080/uploadMultipleFiles",
+        data: fd,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            console.log(response);
+            alert(response);
+            // process response
+        },
+        error: function (error) {
+            console.log(error);
+            // process error
+        }
+    });
+    
+    
+ 
+ 
+});
+
+
+
+
+});
+
+
+</script>
+
+
+<h3>Single File Upload......</h3>
+<form id="singleUploadForm" name="singleUploadForm">
+  <label for="myfile">Select a file:</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+ <input type="button" id="button1" value="Submit">
+</form>
+
+<br><br>
+
+<h3>Multiple File Upload </h3>
+
+<form id="multipleUploadForm" name="multipleUploadForm">
+  <input id="myfiles" type="file" name="myfiles" multiple required /> <br><br>
+  <input type="button" id="button2" value="Submit">
+ </form>
+                 
+</body>
+</html>
+
